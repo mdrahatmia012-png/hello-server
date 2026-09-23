@@ -3,3 +3,10 @@ button {
     color: white;
     font-weight: bold;
 }
+#response {
+    font-weight: bold;
+}
+
+.letter {
+    display: inline;
+}
