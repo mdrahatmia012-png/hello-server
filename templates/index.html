@@ -32,7 +32,27 @@
 
             const data = await response.json();
 
-            document.getElementById("response").textContent = data.reply;
+     const responseElement = document.getElementById("response");
+
+responseElement.innerHTML = "";
+
+const colors = [
+    "red",
+    "blue",
+    "green",
+    "purple",
+    "orange"
+];
+
+for (let i = 0; i < data.reply.length; i++) {
+    const letter = document.createElement("span");
+
+    letter.textContent = data.reply[i];
+    letter.className = "letter";
+    letter.style.color = colors[i % colors.length];
+
+    responseElement.appendChild(letter);
+}
         }
     </script>
 
